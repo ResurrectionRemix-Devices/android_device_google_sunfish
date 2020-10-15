@@ -1,5 +1,6 @@
 # Copyright (C) 2018-2020 The Dirty Unicorns Project
-#
+#                    2020 Resurrection Remix OS Q
+
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -21,8 +22,8 @@
 # lines, aosp and du, hence its name.
 #
 
-# Include DU common configuration
-include vendor/du/config/common_full_phone.mk
+# Include RR common configuration
+include vendor/rr/config/common_full_phone.mk
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/sunfish/aosp_sunfish.mk)
@@ -31,7 +32,16 @@ $(call inherit-product, device/google/sunfish/aosp_sunfish.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := du_sunfish
+# Face unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# RR Wallpapers
+BUILD_RR_WALLPAPERS := true
+
+# Signing (vendor/certs is a symlink to ~/.android-certs)
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
+
+PRODUCT_NAME := rr_sunfish
 PRODUCT_DEVICE := sunfish
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 4a
