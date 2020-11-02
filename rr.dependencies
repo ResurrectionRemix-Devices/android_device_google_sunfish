@@ -1,21 +1,22 @@
 [
  {
-   "remote":      "github",
-   "repository":  "DirtyUnicorns/android_device_google_sunfish-sepolicy",
-   "target_path": "device/google/sunfish-sepolicy",
-   "branch":      "q10x"
- },
- {
-   "remote":      "github",
-   "repository":  "DirtyUnicorns/android_kernel_google_sunfish",
+   "remote":      "rr-d",
+   "repository":  "kernel_google_sunfish",
    "target_path": "kernel/google/sunfish",
-   "branch":      "q10x"
+   "branch":      "Q"
+ },
+ {
+   "remote":      "rr-d",
+   "repository":  "proprietary_vendor_google",
+   "target_path": "vendor/google",
+   "branch":      "Q"
  },
  {
    "remote":      "github",
-   "repository":  "DirtyUnicorns/android_vendor_google",
-   "target_path": "vendor/google",
-   "branch":      "q10x"
+   "repository":  "kdrag0n/proton-clang",
+   "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
+   "branch":      "master",
+   "clone-depth": "1"
  },
  {
    "remote":      "https://git.dirtyunicorns.com/DirtyUnicorns/",
